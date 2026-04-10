@@ -1,0 +1,2 @@
+# Redirect www to non-www
+https://www.das.org.au/* https://das.org.au/:splat 301!
