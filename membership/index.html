@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Membership Application - Disability Advocacy Service</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <a href="../" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none;">
+          <img src="../images/das-logo.svg" alt="DAS Logo" style="width: 50px; height: 50px;">
+          <span style="color: var(--primary-dark);">Disability Advocacy Service</span>
+        </a>
+      </div>
+      <nav>
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="../index.html" class="nav-link">HOME</a></li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link">ABOUT US</a>
+            <ul class="dropdown-menu">
+              <li><a href="../about-us/index.html">About Us</a></li>
+              <li><a href="../board-and-staff/index.html">Board and Staff</a></li>
+              <li><a href="../reports/index.html">Reports</a></li>
+              <li><a href="../privacy-statement/index.html">Privacy Statement</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link">NEWS</a>
+            <ul class="dropdown-menu">
+              <li><a href="../news/index.html">News</a></li>
+              <li><a href="../disability-royal-commission/index.html">Disability Royal Commission</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link">FORMS</a>
+            <ul class="dropdown-menu">
+              <li><a href="../forms/index.html">Forms Overview</a></li>
+              <li><a href="../membership/index.html">Membership Application</a></li>
+              <li><a href="../client-feedback-form/index.html">Client Feedback Form</a></li>
+              <li><a href="../client-referral-form/index.html">Client Referral Form</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="../calendar/index.html" class="nav-link">EVENTS</a></li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link">CONTACT</a>
+            <ul class="dropdown-menu">
+              <li><a href="../contact-us/index.html">Contact Us</a></li>
+              <li><a href="../contact-us/index.html#donations">Donations</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/DisabilityAdvocacyServiceInc" target="_blank" class="social-icon" title="Facebook">f</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PAGE BANNER -->
+  <section class="page-banner">
+    <div class="page-banner-content">
+      <h1>Membership Application</h1>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <section class="content-section">
+      <h2>Join Our Community</h2>
+      <div class="light-bg-section">
+        <p>Become a member of the Disability Advocacy Service and join a community of people with disability advocating for their rights and wellbeing.</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Membership Benefits</h2>
+      <ul>
+        <li>Access to free advocacy services</li>
+        <li>Participation in community events and awareness sessions</li>
+        <li>Regular updates on disability rights and advocacy</li>
+        <li>Connection with other people with disability</li>
+        <li>Support and information for navigating NDIS and other services</li>
+      </ul>
+    </section>
+
+    <section class="content-section">
+      <h2>How to Apply</h2>
+      <p>Membership is free and open to people with disability. To apply:</p>
+      <ol style="padding-left: 2rem;">
+        <li>Complete the membership application form below</li>
+        <li>Provide your contact details and brief information about your advocacy interests</li>
+        <li>Submit the form or contact us directly</li>
+        <li>We will confirm your membership and provide you with more information</li>
+      </ol>
+    </section>
+
+    <section class="content-section">
+      <h2>Membership Application Form</h2>
+      <form style="max-width: 600px;">
+        <div style="margin-bottom: 1.5rem;">
+          <label for="fullname" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Full Name *</label>
+          <input type="text" id="fullname" name="fullname" required style="width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 4px;">
+        </div>
+        <div style="margin-bottom: 1.5rem;">
+          <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Email Address *</label>
+          <input type="email" id="email" name="email" required style="width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 4px;">
+        </div>
+        <div style="margin-bottom: 1.5rem;">
+          <label for="phone" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Phone Number</label>
+          <input type="tel" id="phone" name="phone" style="width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 4px;">
+        </div>
+        <div style="margin-bottom: 1.5rem;">
+          <label for="interests" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Areas of Advocacy Interest</label>
+          <textarea id="interests" name="interests" rows="4" style="width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 4px;"></textarea>
+        </div>
+        <div style="margin-bottom: 1.5rem;">
+          <input type="checkbox" id="consent" name="consent" required>
+          <label for="consent" style="margin-left: 0.5rem;">I consent to being contacted by DAS for membership information</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit Application</button>
+      </form>
+    </section>
+
+    <section class="content-section">
+      <h2>Questions?</h2>
+      <p>If you have any questions about membership, please <a href="../contact-us/index.html">contact us</a>.</p>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <img src="../images/das-logo-white.svg" alt="DAS Logo" style="width: 60px; height: 60px; margin-bottom: 1rem;">
+        <p><strong>Disability Advocacy Service Inc.</strong></p>
+        <p>Free, confidential advocacy for people with disability.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Alice Springs</h3>
+        <p>
+          <strong>3/11 Railway Terrace</strong><br>
+          Alice Springs, NT 0870<br>
+          (Opposite McDonald's)
+        </p>
+        <p><strong>Phone:</strong> <a href="tel:0889531422">(08) 8953-1422</a><br>
+        <strong>Email:</strong> <a href="mailto:admin@das.org.au">admin@das.org.au</a><br>
+        <strong>Hours:</strong> Mon-Fri 8:30am - 4:30pm</p>
+      </div>
+      <div class="footer-section">
+        <h3>Tennant Creek</h3>
+        <p><strong>Phone:</strong> <a href="tel:0889531422">(08) 8953-1422</a><br>
+        <strong>Email:</strong> <a href="mailto:admin@das.org.au">admin@das.org.au</a></p>
+      </div>
+      <div class="footer-section">
+        <h3>Support Us</h3>
+        <p>Help us continue our free advocacy services.</p>
+        <div class="footer-badges">
+          <div class="badge">GiveNow Badge</div>
+          <div class="badge">ACNC Charity Badge</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Disability Advocacy Service Inc. All rights reserved. | <a href="../privacy-statement/index.html">Privacy Statement</a></p>
+    </div>
+  </footer>
+</body>
+</html>
