@@ -7,20 +7,27 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <!-- HEADER -->
   <header>
     <div class="header-container">
       <div class="logo">
         <a href="/" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none;">
-          <img src="/images/das-logo.svg" alt="DAS Logo" style="width: 50px; height: 50px;">
-          <span style="color: var(--primary-dark);">Disability Advocacy Service</span>
+          <img src="/images/das-logo-screenshot.png" alt="DAS Logo" style="width: 40px; height: auto;">
+          <span style="color: var(--primary-dark); font-size: 1.1rem;">Disability Advocacy Service</span>
         </a>
       </div>
-      <nav>
+      <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav aria-label="Main navigation">
         <ul class="nav-menu">
           <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
           <li class="nav-item dropdown">
-            <a href="#" class="nav-link">ABOUT US</a>
+            <a href="#" class="nav-link">ABOUT</a>
             <ul class="dropdown-menu">
               <li><a href="about-us/index.html">About Us</a></li>
               <li><a href="board-and-staff/index.html">Board and Staff</a></li>
@@ -52,19 +59,24 @@
               <li><a href="contact-us/index.html#donations">Donations</a></li>
             </ul>
           </li>
+          <li class="nav-item">
+            <a href="https://www.facebook.com/DisabilityAdvocacyServiceInc" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Visit DAS on Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+          </li>
         </ul>
-        <div class="social-icons">
-          <a href="https://www.facebook.com/DisabilityAdvocacyServiceInc" target="_blank" class="social-icon" title="Facebook">f</a>
-        </div>
       </nav>
     </div>
   </header>
 
   <!-- MAIN CONTENT -->
-  <main>
+  <main id="main-content">
     <!-- HERO SECTION -->
     <section class="hero" style="background: linear-gradient(135deg, rgba(193, 102, 107, 0.8) 0%, rgba(208, 131, 141, 0.8) 100%), url('/images/hero-banner.jpg') center/cover;">
-      <h1>Welcome to DAS</h1>
+      <div class="hero-content">
+        <h1>Disability Advocacy Service</h1>
+        <p class="hero-subtitle">Confidential individual advocacy to people with disability, their families and carers in Alice Springs, Tennant Creek and surrounding areas.</p>
+      </div>
     </section>
 
     <!-- WELCOME SECTION -->
@@ -76,61 +88,61 @@
       </div>
     </section>
 
-    <!-- NEW LOCATION SECTION -->
-    <section class="content-section">
-      <h2>New Location</h2>
-      <div class="light-bg-section">
-        <p><strong>We've moved!</strong></p>
-        <p>DAS is now located at:</p>
-        <p>
-          <strong>3/11 Railway Terrace</strong><br>
-          Alice Springs, NT 0870<br>
-          (Opposite McDonald's)
-        </p>
-        <p><strong>Phone:</strong> (08) 8953-1422<br>
-        <strong>Email:</strong> admin@das.org.au<br>
-        <strong>Hours:</strong> Monday to Friday, 8:30am - 4:30pm</p>
-      </div>
-    </section>
-
     <!-- WHAT WE DO SECTION -->
     <section class="content-section">
       <h2>What We Do</h2>
       <div class="card-grid">
-        <div class="card">
-          <img src="/images/icon-advocacy.svg" alt="Advocacy icon" class="card-icon" style="width: 50px; height: 50px;">
-          <h3>Advocacy & NDIS Appeals</h3>
-          <p>Supporting clients to navigate the NDIS and appeal decisions through our free advocacy service.</p>
-        </div>
-        <div class="card">
-          <img src="/images/icon-membership.svg" alt="Membership icon" class="card-icon" style="width: 50px; height: 50px;">
-          <h3>Membership</h3>
-          <p>Join our community to stay informed and connected with other people with disabilities.</p>
-        </div>
-        <div class="card">
-          <img src="/images/icon-events.svg" alt="Events icon" class="card-icon" style="width: 50px; height: 50px;">
-          <h3>Events</h3>
-          <p>Regular community events and workshops to build connection and share knowledge.</p>
-        </div>
-        <div class="card">
-          <img src="/images/icon-royal-commission.svg" alt="Royal Commission icon" class="card-icon" style="width: 50px; height: 50px;">
-          <h3>Disability Royal Commission</h3>
-          <p>Supporting people to understand and engage with the Disability Royal Commission.</p>
-        </div>
-        <div class="card">
-          <img src="/images/icon-donations.svg" alt="Donations icon" class="card-icon" style="width: 50px; height: 50px;">
-          <h3>Support Our Work</h3>
-          <p>Your donations help us continue providing free advocacy services to the community.</p>
-        </div>
+        <a href="about-us/index.html" class="card-link">
+          <div class="card">
+            <img src="/images/icon-advocacy.svg" alt="" class="card-icon" style="width: 80px; height: auto;">
+            <h3>Advocacy & NDIS Appeals</h3>
+            <p>Supporting clients to navigate the NDIS and appeal decisions through our free advocacy service.</p>
+          </div>
+        </a>
+        <a href="membership/index.html" class="card-link">
+          <div class="card">
+            <img src="/images/icon-membership.svg" alt="" class="card-icon" style="width: 80px; height: auto;">
+            <h3>Membership</h3>
+            <p>Join our community to stay informed and connected with other people with disabilities.</p>
+          </div>
+        </a>
+        <a href="calendar/index.html" class="card-link">
+          <div class="card">
+            <img src="/images/icon-events.svg" alt="" class="card-icon" style="width: 80px; height: auto;">
+            <h3>Events</h3>
+            <p>Regular community events and workshops to build connection and share knowledge.</p>
+          </div>
+        </a>
+        <a href="disability-royal-commission/index.html" class="card-link">
+          <div class="card">
+            <img src="/images/icon-royal-commission.svg" alt="" class="card-icon" style="width: 80px; height: auto;">
+            <h3>Disability Royal Commission</h3>
+            <p>Supporting people to understand and engage with the Disability Royal Commission.</p>
+          </div>
+        </a>
+        <a href="contact-us/index.html#donations" class="card-link">
+          <div class="card">
+            <img src="/images/icon-donations.svg" alt="" class="card-icon" style="width: 80px; height: auto;">
+            <h3>Support Our Work</h3>
+            <p>Your donations help us continue providing free advocacy services to the community.</p>
+          </div>
+        </a>
+        <a href="contact-us/index.html" class="card-link">
+          <div class="card">
+            <img src="/images/icon-advocacy.svg" alt="" class="card-icon" style="width: 80px; height: auto;">
+            <h3>Contact Us</h3>
+            <p>Get in touch with our team for support, referrals, or general enquiries.</p>
+          </div>
+        </a>
       </div>
     </section>
 
     <!-- EVENTS SECTION -->
     <section class="content-section">
       <h2>Upcoming Events</h2>
-      <div class="light-bg-section">
-        <p>Currently no upcoming events scheduled. Please check back soon or <a href="contact-us/index.html">contact us</a> to be notified of new events.</p>
-        <p><a href="calendar/index.html" class="btn btn-primary">View Full Calendar</a></p>
+      <div class="light-bg-section" style="text-align: center;">
+        <p style="margin-bottom: var(--spacing-sm);">No upcoming events right now. Check back soon or <a href="contact-us/index.html">get in touch</a> to stay in the loop.</p>
+        <a href="calendar/index.html" class="btn btn-primary">View Calendar</a>
       </div>
     </section>
   </main>
@@ -139,7 +151,7 @@
   <footer>
     <div class="footer-content">
       <div class="footer-section">
-        <img src="/images/das-logo-white.svg" alt="DAS Logo" style="width: 60px; height: 60px; margin-bottom: 1rem;">
+        <img src="/images/das-logo-screenshot.png" alt="DAS Logo" style="width: 60px; height: auto; margin-bottom: 1rem;">
         <p><strong>Disability Advocacy Service Inc.</strong></p>
         <p>Free, confidential advocacy for people with disability.</p>
       </div>
@@ -163,8 +175,12 @@
         <h3>Support Us</h3>
         <p>Help us continue our free advocacy services.</p>
         <div class="footer-badges">
-          <div class="badge">GiveNow Badge</div>
-          <div class="badge">ACNC Charity Badge</div>
+          <a href="https://www.givenow.com.au/disabilityadvocacyservice" target="_blank" rel="noopener noreferrer" class="badge-link" aria-label="Donate via GiveNow">
+            <img src="/images/givenow-logo-png_seeklogo-549217.png" alt="GiveNow - for your community" class="footer-badge-img">
+          </a>
+          <a href="https://www.acnc.gov.au/charity" target="_blank" rel="noopener noreferrer" class="badge-link" aria-label="ACNC Registered Charity">
+            <img src="/images/acnc-registered-charity-logo.jpg" alt="ACNC Registered Charity" class="footer-badge-img">
+          </a>
         </div>
       </div>
     </div>
@@ -172,5 +188,28 @@
       <p>&copy; 2024 Disability Advocacy Service Inc. All rights reserved. | <a href="privacy-statement/index.html">Privacy Statement</a></p>
     </div>
   </footer>
+
+  <script>
+    // Hamburger menu toggle
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('nav');
+
+    hamburger.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('nav-open');
+      hamburger.classList.toggle('active');
+      hamburger.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Mobile dropdown toggle (tap instead of hover)
+    document.querySelectorAll('.dropdown > .nav-link').forEach(link => {
+      link.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          const dropdown = link.parentElement;
+          dropdown.classList.toggle('open');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
