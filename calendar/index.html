@@ -1,1 +1,400 @@
-$(cat /tmp/html_push/calendar.html)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events Calendar - DAS</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .calendar-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .calendar-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+    .calendar-nav h2 {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.5rem;
+      color: var(--primary-dark);
+    }
+    .calendar-nav button {
+      background: var(--primary-dark);
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.95rem;
+    }
+    .calendar-nav button:hover {
+      background: var(--secondary);
+    }
+    .calendar-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 1px;
+      background: #ccc;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .calendar-day-header {
+      background: var(--primary-dark);
+      color: #fff;
+      text-align: center;
+      padding: 0.6rem 0.25rem;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .calendar-day {
+      background: #fff;
+      min-height: 90px;
+      padding: 0.4rem;
+      position: relative;
+      vertical-align: top;
+    }
+    .calendar-day.empty {
+      background: #f9f9f9;
+    }
+    .calendar-day.today {
+      background: #fff5f0;
+      outline: 2px solid var(--secondary);
+      outline-offset: -2px;
+    }
+    .day-number {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #666;
+      margin-bottom: 0.3rem;
+    }
+    .calendar-day.today .day-number {
+      color: var(--secondary);
+    }
+    .event-link {
+      display: block;
+      background: var(--primary-dark);
+      color: #fff;
+      padding: 0.2rem 0.35rem;
+      border-radius: 3px;
+      font-size: 0.7rem;
+      font-family: 'Lato', sans-serif;
+      text-decoration: none;
+      margin-bottom: 0.2rem;
+      line-height: 1.3;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .event-link:hover {
+      background: var(--secondary);
+      color: #fff;
+    }
+    .event-link.community { background: #2a7d4f; }
+    .event-link.community:hover { background: #1e5c3a; }
+    .event-link.workshop { background: #1a5276; }
+    .event-link.workshop:hover { background: #123a54; }
+
+    .events-list {
+      margin-top: 2rem;
+    }
+    .events-list h3 {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--primary-dark);
+      margin-bottom: 0.75rem;
+    }
+    .event-card {
+      background: #fff;
+      border-left: 4px solid var(--primary-dark);
+      padding: 0.75rem 1rem;
+      margin-bottom: 0.75rem;
+      border-radius: 0 6px 6px 0;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+    .event-card .event-date {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.8rem;
+      color: var(--secondary);
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+    }
+    .event-card .event-title {
+      font-weight: 600;
+      color: var(--primary-dark);
+      margin-bottom: 0.2rem;
+    }
+    .event-card .event-desc {
+      font-size: 0.9rem;
+      color: #555;
+    }
+    .event-card a {
+      color: var(--primary-dark);
+      text-decoration: underline;
+    }
+
+    .how-to-note {
+      display: none; /* hidden on live site, visible in source for editors */
+    }
+
+    @media (max-width: 768px) {
+      .calendar-day-header { font-size: 0.65rem; padding: 0.4rem 0.15rem; }
+      .calendar-day { min-height: 55px; padding: 0.25rem; }
+      .day-number { font-size: 0.7rem; }
+      .event-link { font-size: 0.55rem; padding: 0.15rem 0.25rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <a href="../" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none;">
+          <img src="../images/das-logo.svg" alt="DAS Logo" style="width: 80px; height: auto;">
+          <span style="color: var(--primary-dark);">Disability Advocacy Service</span>
+          
+        </a>
+      </div>
+      <nav>
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="../index.html" class="nav-link">HOME</a></li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link">ABOUT US</a>
+            <ul class="dropdown-menu">
+              <li><a href="../about-us/index.html">About Us</a></li>
+              <li><a href="../board-and-staff/index.html">Board and Staff</a></li>
+              <li><a href="../reports/index.html">Reports</a></li>
+              <li><a href="../privacy-statement/index.html">Privacy Statement</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link">NEWS</a>
+            <ul class="dropdown-menu">
+              <li><a href="../news/index.html">News</a></li>
+              <li><a href="../disability-royal-commission/index.html">Disability Royal Commission</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link">FORMS</a>
+            <ul class="dropdown-menu">
+              <li><a href="../forms/index.html">Forms Overview</a></li>
+              <li><a href="../membership/index.html">Membership Application</a></li>
+              <li><a href="../client-feedback-form/index.html">Client Feedback Form</a></li>
+              <li><a href="../client-referral-form/index.html">Client Referral Form</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="../calendar/index.html" class="nav-link">EVENTS</a></li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link">CONTACT</a>
+            <ul class="dropdown-menu">
+              <li><a href="../contact-us/index.html">Contact Us</a></li>
+              <li><a href="../contact-us/index.html#donations">Donations</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/DisabilityAdvocacyServiceInc" target="_blank" class="social-icon" title="Facebook">f</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-banner">
+    <div class="page-banner-content">
+      <h1>Events Calendar</h1>
+    </div>
+  </section>
+
+  <main>
+    <section class="content-section">
+      <div class="calendar-wrapper">
+
+        <!--
+          =====================================================
+          HOW TO ADD EVENTS:
+          Find the EVENTS array below in the <script> tag.
+          Add a new line like this:
+
+            { date: "2026-05-15", title: "My Event", link: "#", type: "community", desc: "Optional description" },
+
+          - date: YYYY-MM-DD format
+          - title: Short name (shows on calendar cell)
+          - link: URL to link to (use "#" for no link)
+          - type: "default", "community", or "workshop" (changes the colour)
+          - desc: Longer description (shows in the list below the calendar)
+
+          That's it. Save and push.
+          =====================================================
+        -->
+
+        <div id="calendar"></div>
+
+        <div class="events-list" id="events-list"></div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Stay Updated</h2>
+      <div class="form-info">
+        <p>To be notified about upcoming events, contact us directly:</p>
+        <p>
+          <strong>Phone:</strong> <a href="tel:0889531422">(08) 8953-1422</a><br>
+          <strong>Email:</strong> <a href="mailto:admin@das.org.au">admin@das.org.au</a>
+        </p>
+        <p>You can also follow us on <a href="https://www.facebook.com/DisabilityAdvocacyServiceInc" target="_blank">Facebook</a> for event updates.</p>
+        <p><a href="../contact-us/index.html" class="btn btn-primary">Contact Us</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <img src="../images/das-logo-white.svg" alt="DAS Logo" style="width: 60px; height: 60px; margin-bottom: 1rem;">
+        <p><strong>Disability Advocacy Service Inc.</strong></p>
+        <p>Free, confidential advocacy for people with disability.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Alice Springs</h3>
+        <p><strong>3/11 Railway Terrace</strong><br>Alice Springs, NT 0870<br>(Opposite McDonald's)</p>
+        <p><strong>Phone:</strong> <a href="tel:0889531422">(08) 8953-1422</a><br><strong>Email:</strong> <a href="mailto:admin@das.org.au">admin@das.org.au</a><br><strong>Hours:</strong> Mon-Fri 8:30am - 4:30pm</p>
+      </div>
+      <div class="footer-section">
+        <h3>Tennant Creek</h3>
+        <p><strong>Phone:</strong> <a href="tel:0889531422">(08) 8953-1422</a><br><strong>Email:</strong> <a href="mailto:admin@das.org.au">admin@das.org.au</a></p>
+      </div>
+      <div class="footer-section">
+        <h3>Support Us</h3>
+        <p>Help us continue our free advocacy services.</p>
+        <div class="footer-badges">
+          <div class="badge">GiveNow Badge</div>
+          <div class="badge">ACNC Charity Badge</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Disability Advocacy Service Inc. All rights reserved. | <a href="../privacy-statement/index.html">Privacy Statement</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // ============================================================
+    // EVENTS - Add your events here. One line per event.
+    // ============================================================
+    const EVENTS = [
+      // Example events (delete or replace these):
+      // { date: "2026-04-22", title: "Community Info Session", link: "#", type: "community", desc: "Free info session on NDIS appeals. 10am at DAS office." },
+      // { date: "2026-05-06", title: "Advocacy Workshop", link: "#", type: "workshop", desc: "Learn about your advocacy rights. 1pm-3pm." },
+      // { date: "2026-05-06", title: "Board Meeting", link: "#", type: "default", desc: "Monthly board meeting." },
+      // { date: "2026-05-20", title: "Member Morning Tea", link: "#", type: "community", desc: "Come say g'day. 10am at the office." },
+    ];
+    // ============================================================
+
+    const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+    const DAYS = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+
+    let currentYear, currentMonth;
+    const now = new Date();
+    currentYear = now.getFullYear();
+    currentMonth = now.getMonth();
+
+    function getEventsForDate(y, m, d) {
+      const ds = `${y}-${String(m+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+      return EVENTS.filter(e => e.date === ds);
+    }
+
+    function getEventsForMonth(y, m) {
+      const prefix = `${y}-${String(m+1).padStart(2,'0')}-`;
+      return EVENTS.filter(e => e.date.startsWith(prefix)).sort((a,b) => a.date.localeCompare(b.date));
+    }
+
+    function isToday(y, m, d) {
+      return y === now.getFullYear() && m === now.getMonth() && d === now.getDate();
+    }
+
+    function render() {
+      const firstDay = new Date(currentYear, currentMonth, 1);
+      const lastDay = new Date(currentYear, currentMonth + 1, 0);
+      const daysInMonth = lastDay.getDate();
+      // Monday = 0, Sunday = 6
+      let startDay = firstDay.getDay() - 1;
+      if (startDay < 0) startDay = 6;
+
+      let html = `<div class="calendar-nav">
+        <button onclick="prev()">&larr; Prev</button>
+        <h2>${MONTHS[currentMonth]} ${currentYear}</h2>
+        <button onclick="next()">Next &rarr;</button>
+      </div>`;
+
+      html += '<div class="calendar-grid">';
+      DAYS.forEach(d => { html += `<div class="calendar-day-header">${d}</div>`; });
+
+      // Empty cells before first day
+      for (let i = 0; i < startDay; i++) {
+        html += '<div class="calendar-day empty"></div>';
+      }
+
+      // Day cells
+      for (let d = 1; d <= daysInMonth; d++) {
+        const today = isToday(currentYear, currentMonth, d);
+        const events = getEventsForDate(currentYear, currentMonth, d);
+        html += `<div class="calendar-day${today ? ' today' : ''}">`;
+        html += `<div class="day-number">${d}</div>`;
+        events.forEach(ev => {
+          const cls = ev.type && ev.type !== 'default' ? ` ${ev.type}` : '';
+          if (ev.link && ev.link !== '#') {
+            html += `<a href="${ev.link}" class="event-link${cls}" title="${ev.title}">${ev.title}</a>`;
+          } else {
+            html += `<span class="event-link${cls}" title="${ev.title}" style="cursor:default;">${ev.title}</span>`;
+          }
+        });
+        html += '</div>';
+      }
+
+      // Pad remaining cells
+      const totalCells = startDay + daysInMonth;
+      const remainder = totalCells % 7;
+      if (remainder > 0) {
+        for (let i = 0; i < 7 - remainder; i++) {
+          html += '<div class="calendar-day empty"></div>';
+        }
+      }
+
+      html += '</div>';
+      document.getElementById('calendar').innerHTML = html;
+
+      // Events list for this month
+      const monthEvents = getEventsForMonth(currentYear, currentMonth);
+      let listHtml = '';
+      if (monthEvents.length > 0) {
+        listHtml = `<h3>Events This Month</h3>`;
+        monthEvents.forEach(ev => {
+          const dateObj = new Date(ev.date + 'T00:00:00');
+          const dayNum = dateObj.getDate();
+          const dayName = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'][dateObj.getDay()];
+          listHtml += `<div class="event-card">
+            <div class="event-date">${dayName} ${dayNum} ${MONTHS[currentMonth]}</div>
+            <div class="event-title">${ev.link && ev.link !== '#' ? `<a href="${ev.link}">${ev.title}</a>` : ev.title}</div>
+            ${ev.desc ? `<div class="event-desc">${ev.desc}</div>` : ''}
+          </div>`;
+        });
+      } else {
+        listHtml = `<h3>Events This Month</h3><p style="color:#888;">No events scheduled for ${MONTHS[currentMonth]}. Check back soon!</p>`;
+      }
+      document.getElementById('events-list').innerHTML = listHtml;
+    }
+
+    function prev() { currentMonth--; if (currentMonth < 0) { currentMonth = 11; currentYear--; } render(); }
+    function next() { currentMonth++; if (currentMonth > 11) { currentMonth = 0; currentYear++; } render(); }
+
+    render();
+  </script>
+</body>
+</html>
