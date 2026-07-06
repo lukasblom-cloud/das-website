@@ -1,162 +1,188 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-AU">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reports - Disability Advocacy Service</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reports — Disability Advocacy Service Inc</title>
+  <meta name="description" content="Disability Advocacy Service Inc (DAS) — free, confidential advocacy for people with disability in Alice Springs, Tennant Creek and Central Australia.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-  <!-- HEADER -->
-  <header>
-    <div class="header-container">
-      <div class="logo">
-        <a href="../" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none;">
-          <img src="../images/das-logo-screenshot.png" alt="DAS Logo" style="width: 40px; height: auto;">
-          <span style="color: var(--primary-dark); font-size: 1.1rem;">Disability Advocacy Service</span>
-        </a>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Utility bar -->
+  <div class="utility">
+    <div class="container row">
+      <span class="tag">Free, confidential advocacy — Alice Springs &amp; Tennant Creek, NT</span>
+      <div class="quick">
+        <a href="tel:0889531422" data-org="phone"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(08) 8953 – 1422</a>
+        <a href="mailto:admin@das.org.au" data-org="email"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>admin@das.org.au</a>
+        <a href="https://www.facebook.com/DisabilityAdvocacyCentralAustralia/" aria-label="DAS on Facebook"><svg class="ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.5 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg></a>
       </div>
-      <nav>
-        <ul class="nav-menu">
-          <li class="nav-item"><a href="../index.html" class="nav-link">HOME</a></li>
-          <li class="nav-item dropdown">
-            <a href="#" class="nav-link">ABOUT</a>
-            <ul class="dropdown-menu">
-              <li><a href="../about-us/index.html">About Us</a></li>
-              <li><a href="../board-and-staff/index.html">Board and Staff</a></li>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container row">
+      <a href="../index.html" class="brand-lockup" aria-label="Disability Advocacy Service — home">
+        <img class="mark" src="../images/burst-device.png" alt=""><span class="wordmark">Disability<br>Advocacy Service</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="primary" id="primary-nav" aria-label="Primary">
+        <ul class="primary-nav">
+          <li><a class="navlink" href="../index.html">Home</a></li>
+          <li><a class="navlink active" href="../about-us/index.html" aria-current="page">About Us <span class="chev" aria-hidden="true"></span></a>
+            <ul class="submenu">
+              <li><a href="../board-and-staff/index.html">Board and CEO</a></li>
               <li><a href="../reports/index.html">Reports</a></li>
+              <li><a href="../submissions/index.html">Submissions</a></li>
               <li><a href="../privacy-statement/index.html">Privacy Statement</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a href="#" class="nav-link">NEWS</a>
-            <ul class="dropdown-menu">
-              <li><a href="../news/index.html">News</a></li>
+            </ul></li>
+          <li><a class="navlink" href="../news/index.html">News <span class="chev" aria-hidden="true"></span></a>
+            <ul class="submenu">
               <li><a href="../disability-royal-commission/index.html">Disability Royal Commission</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a href="#" class="nav-link">FORMS</a>
-            <ul class="dropdown-menu">
-              <li><a href="../forms/index.html">Forms Overview</a></li>
+            </ul></li>
+          <li><a class="navlink" href="../forms/index.html">Forms <span class="chev" aria-hidden="true"></span></a>
+            <ul class="submenu">
               <li><a href="../membership/index.html">Membership Application</a></li>
               <li><a href="../client-feedback-form/index.html">Client Feedback Form</a></li>
               <li><a href="../client-referral-form/index.html">Client Referral Form</a></li>
-            </ul>
-          </li>
-          <li class="nav-item"><a href="../calendar/index.html" class="nav-link">EVENTS</a></li>
-          <li class="nav-item dropdown">
-            <a href="#" class="nav-link">CONTACT</a>
-            <ul class="dropdown-menu">
-              <li><a href="../contact-us/index.html">Contact Us</a></li>
-              <li><a href="../contact-us/index.html#donations">Donations</a></li>
-            </ul>
-          </li>
+            </ul></li>
+          <li><a class="navlink" href="../calendar/index.html">Events</a></li>
+          <li><a class="navlink" href="../contact-us/index.html">Contact <span class="chev" aria-hidden="true"></span></a>
+            <ul class="submenu">
+              <li><a href="https://www.givenow.com.au/wwwdasorgau" target="_blank" rel="noopener">Donations</a></li>
+            </ul></li>
         </ul>
-        <div class="social-icons">
-          <a href="https://www.facebook.com/DisabilityAdvocacyServiceInc" target="_blank" class="social-icon" title="Facebook">f</a>
-        </div>
       </nav>
+      <a class="fb" href="https://www.facebook.com/DisabilityAdvocacyCentralAustralia/" aria-label="DAS on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.5 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg></a>
     </div>
   </header>
 
-  <!-- PAGE BANNER -->
-  <section class="page-banner">
-    <div class="page-banner-content">
+  <div class="page-hero">
+    <div class="container">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> <span class="sep" aria-hidden="true">/</span> <a href="../about-us/index.html">About Us</a> <span class="sep" aria-hidden="true">/</span> <span aria-current="page">Reports</span></nav>
       <h1>Reports</h1>
+      <p class="sub">Annual reports and strategic planning documents.</p>
     </div>
-  </section>
+  </div>
+  <main id="main-content">
 
-  <!-- MAIN CONTENT -->
-  <main>
-    <section class="content-section">
-      <h2>Annual Reports</h2>
-      <p>Our annual reports provide transparency and accountability for our work, including statistics on our services and activities throughout the year.</p>
-      <div class="card-grid">
-        <a href="../reports/89553-DAS-Annual_Report-2023_2024-A4-05b.pdf" class="card" style="text-decoration: none;">
-          <img src="../images/report-2023-24.jpg" alt="2023-24 Annual Report Cover" class="photo-placeholder" style="font-size: 2rem; object-fit: cover; width: 100%; height: auto;">
-          <h3>2023-24 Annual Report</h3>
-          <p>Download PDF</p>
-        </a>
-        <a href="../reports/DAS-Annual-Report-2023.pdf" class="card" style="text-decoration: none;">
-          <img src="../images/report-2023-24.jpg" alt="2023 Annual Report Cover" class="photo-placeholder" style="font-size: 2rem; object-fit: cover; width: 100%; height: auto;">
-          <h3>2023 Annual Report</h3>
-          <p>Download PDF</p>
-        </a>
-        <a href="../reports/Annual-Report-2020-2021.pdf" class="card" style="text-decoration: none;">
-          <img src="../images/report-2020-21.jpg" alt="2020-21 Annual Report Cover" class="photo-placeholder" style="font-size: 2rem; object-fit: cover; width: 100%; height: auto;">
-          <h3>2020-21 Annual Report</h3>
-          <p>Download PDF</p>
-        </a>
-        <a href="../reports/Annual-Report-2018-2019.pdf" class="card" style="text-decoration: none;">
-          <img src="../images/report-2018-19.jpg" alt="2018-19 Annual Report Cover" class="photo-placeholder" style="font-size: 2rem; object-fit: cover; width: 100%; height: auto;">
-          <h3>2018-19 Annual Report</h3>
-          <p>Download PDF</p>
-        </a>
+    <section class="section section--tight">
+      <div class="container">
+        <p class="eyebrow">Transparency</p>
+        <h2 class="h">Annual reports</h2>
+        <p class="lead" style="margin-bottom:36px;">Our annual reports provide transparency and accountability for our work, including statistics on our services and activities throughout the year.</p>
+        <div class="report-grid">
+          <a class="report-card" href="../reports/89553-DAS-Annual_Report-2023_2024-A4-05b.pdf" target="_blank" rel="noopener">
+            <div class="cover"><img src="../images/reports/annual-2023-24.jpeg" alt=""></div>
+            <div class="body"><h3>2023–24 Annual Report</h3><span class="dl">Download PDF</span></div>
+          </a>
+          <a class="report-card" href="../reports/DAS-Annual-Report-2023.pdf" target="_blank" rel="noopener">
+            <div class="cover"><img src="../images/reports/annual-2023.jpg" alt=""></div>
+            <div class="body"><h3>2023 Annual Report</h3><span class="dl">Download PDF</span></div>
+          </a>
+          <a class="report-card" href="../reports/Annual-Report-2020-2021.pdf" target="_blank" rel="noopener">
+            <div class="cover"><img src="../images/reports/annual-2020-21.jpg" alt=""></div>
+            <div class="body"><h3>2020–21 Annual Report</h3><span class="dl">Download PDF</span></div>
+          </a>
+          <a class="report-card" href="../reports/Annual-Report-2019-2020.pdf" target="_blank" rel="noopener">
+            <div class="cover"><img src="../images/reports/annual-2019-20.jpg" alt=""></div>
+            <div class="body"><h3>2019–20 Annual Report</h3><span class="dl">Download PDF</span></div>
+          </a>
+          <a class="report-card" href="../reports/Annual-Report-2018-2019.pdf" target="_blank" rel="noopener">
+            <div class="cover"><img src="../images/reports/annual-2018-19.jpg" alt=""></div>
+            <div class="body"><h3>2018–19 Annual Report</h3><span class="dl">Download PDF</span></div>
+          </a>
+        </div>
       </div>
     </section>
 
-    <section class="content-section">
-      <h2>Strategic Planning Documents</h2>
-      <p>Our strategic plan guides our work and ensures we remain focused on our mission to advocate for the rights and inclusion of people with disability.</p>
-      <div class="card-grid">
-        <a href="../reports/DAS-Strategic_Plan-2024-26.pdf" class="card" style="text-decoration: none;">
-          <div class="photo-placeholder" style="font-size: 2rem;">📋</div>
-          <h3>Strategic Plan 2024-26</h3>
-          <p>Download PDF</p>
-        </a>
+    <section class="section section--tinted">
+      <div class="container welcome" style="align-items:center;">
+        <div class="prose">
+          <p class="eyebrow">Direction</p>
+          <h2 class="h">Strategic planning</h2>
+          <p>Our strategic plan guides our work and ensures we remain focused on our mission to advocate for the rights and inclusion of people with disability.</p>
+        </div>
+        <div class="report-grid" style="grid-template-columns:minmax(210px, 260px);">
+          <a class="report-card" href="../reports/DAS-Strategic_Plan-2024-26.pdf" target="_blank" rel="noopener">
+            <div class="cover"><img src="../images/reports/strategic-plan-2024-26.jpeg" alt=""></div>
+            <div class="body"><h3>Strategic Plan 2024–26</h3><span class="dl">Download PDF</span></div>
+          </a>
+        </div>
       </div>
     </section>
 
-    <section class="content-section">
-      <h2>Request Information</h2>
-      <div class="light-bg-section">
-        <p>Looking for a specific report or information? Contact us and we'll be happy to help.</p>
-        <p>
-          <strong>Phone:</strong> <a href="tel:0889531422">(08) 8953-1422</a><br>
-          <strong>Email:</strong> <a href="mailto:admin@das.org.au">admin@das.org.au</a>
-        </p>
-        <p><a href="../contact-us/index.html" class="btn btn-primary">Contact Us</a></p>
+    <section class="section">
+      <div class="container">
+        <div class="panel" style="max-width:720px;">
+          <h3>Request information</h3>
+          <p>Looking for a specific report or information? Contact us and we'll be happy to help.</p>
+          <p><strong>Phone:</strong> <a href="tel:0889531422" data-org="phone">(08) 8953 – 1422</a> &nbsp;·&nbsp;
+             <strong>Email:</strong> <a href="mailto:admin@das.org.au" data-org="email">admin@das.org.au</a></p>
+          <a href="../contact-us/index.html" class="btn btn--primary btn--sm">Contact us <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
       </div>
     </section>
   </main>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-content">
-      <div class="footer-section">
-        <img src="../images/das-logo-screenshot.png" alt="DAS Logo" style="width: 60px; height: auto; margin-bottom: 1rem; background: none;">
-        <p><strong>Disability Advocacy Service Inc.</strong></p>
-        <p>Free, confidential advocacy for people with disability.</p>
-      </div>
-      <div class="footer-section">
-        <h3>Alice Springs</h3>
-        <p>
-          <strong>3/11 Railway Terrace</strong><br>
-          Alice Springs, NT 0870<br>
-          (Opposite McDonald's)
-        </p>
-        <p><strong>Phone:</strong> <a href="tel:0889531422">(08) 8953-1422</a><br>
-        <strong>Email:</strong> <a href="mailto:admin@das.org.au">admin@das.org.au</a><br>
-        <strong>Hours:</strong> Mon-Fri 8:30am - 4:30pm</p>
-      </div>
-      <div class="footer-section">
-        <h3>Tennant Creek</h3>
-        <p><strong>Phone:</strong> <a href="tel:0889531422">(08) 8953-1422</a><br>
-        <strong>Email:</strong> <a href="mailto:admin@das.org.au">admin@das.org.au</a></p>
-      </div>
-      <div class="footer-section">
-        <h3>Support Us</h3>
-        <p>Help us continue our free advocacy services.</p>
-        <div class="footer-badges">
-          <div class="badge">GiveNow Badge</div>
-          <div class="badge">ACNC Charity Badge</div>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="cols">
+        <div class="logo">
+          <div class="brand-lockup brand-lockup--footer"><img class="mark" src="../images/burst-device.png" alt=""><span class="wordmark">Disability<br>Advocacy Service</span></div>
+          <p class="tag">A free, confidential advocacy service to individuals and families with a disability — supporting and empowering clients to exercise their own rights.</p>
+        </div>
+        <div class="office-block">
+          <h4 class="office">Alice Springs, NT</h4>
+          <p><strong>Location:</strong><br><span data-org="address-lines">3/11 Railway Tce,<br>(Opposite McDonalds)<br>Alice Springs, NT 0870</span></p>
+          <a class="map-link" href="https://maps.app.goo.gl/xrYGv6QfevFYsygX8" data-org="map-url" target="_blank" rel="noopener">
+            View on Google Maps<img src="../images/location-dot-wh.svg" alt="">
+          </a>
+          <p><strong>Phone:</strong> <a href="tel:0889531422" data-org="phone">(08) 8953 – 1422</a></p>
+          <p><strong>Email:</strong> <a href="mailto:admin@das.org.au" data-org="email">admin@das.org.au</a></p>
+          <p><strong>Office Hours:</strong><br><span data-org="hours">Mon – Fri&nbsp; 8:30am – 4:30pm</span></p>
+        </div>
+        <div class="office-block links">
+          <h4 class="office">Tennant Creek, NT</h4>
+          <p>All enquiries and referrals</p>
+          <p><strong>Phone:</strong> <a href="tel:0889531422" data-org="phone">(08) 8953 – 1422</a><br>
+             <strong>Email:</strong> <a href="mailto:admin@das.org.au" data-org="email">admin@das.org.au</a></p>
+          <h4 style="margin-top:24px;">Quick links</h4>
+          <p style="margin:0; line-height:2.1;">
+            <a href="../about-us/index.html">About us</a> &nbsp;·&nbsp; <a href="../reports/index.html">Reports</a><br>
+            <a href="../membership/index.html">Membership</a> &nbsp;·&nbsp; <a href="../client-referral-form/index.html">Referral form</a><br>
+            <a href="../privacy-statement/index.html">Privacy statement</a>
+          </p>
+        </div>
+        <div class="charity">
+          <h4>Registered charity</h4>
+          <div class="charity-badges">
+            <img class="acnc" src="../images/acnc-tick.png" alt="ACNC Registered Charity">
+            <img class="gn" src="../images/givenow.png" alt="GiveNow">
+          </div>
+          <p>DAS is a registered tax-deductible charity.</p>
+          <a href="https://www.givenow.com.au/wwwdasorgau" target="_blank" rel="noopener" class="btn btn--white btn--sm" style="align-self:flex-start;">Donate on Give Now <span class="arrow" aria-hidden="true">→</span></a>
         </div>
       </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2024 Disability Advocacy Service Inc. All rights reserved. | <a href="../privacy-statement/index.html">Privacy Statement</a></p>
+      <div class="bottom">
+        <span>© <span data-year>2026</span> Disability Advocacy Service Inc</span>
+        <span><a href="../privacy-statement/index.html">Privacy Statement</a> &nbsp;·&nbsp; <a href="../contact-us/index.html">Contact</a></span>
+      </div>
     </div>
   </footer>
+
+  <a class="fab" href="../client-referral-form/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>Submit a referral</a>
+
+  <script src="../js/site.js"></script>
 </body>
 </html>

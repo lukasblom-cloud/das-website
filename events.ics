@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Disability Advocacy Service Inc//Events//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:DAS Events
+X-WR-TIMEZONE:Australia/Darwin
+BEGIN:VEVENT
+UID:20260701-NDISPricingArrangements@das.org.au
+DTSTAMP:20260701T000000Z
+DTSTART;VALUE=DATE:20260701
+DTEND;VALUE=DATE:20260702
+SUMMARY:NDIS Pricing Arrangements update takes effect
+DESCRIPTION:New price limits apply from today — check how your plan is affected.
+END:VEVENT
+BEGIN:VEVENT
+UID:20261203-InternationalDayPWD@das.org.au
+DTSTAMP:20261203T000000Z
+DTSTART;VALUE=DATE:20261203
+DTEND;VALUE=DATE:20261204
+SUMMARY:International Day of People with Disability
+DESCRIPTION:Global day celebrating the contributions and achievements of people with disability.
+END:VEVENT
+END:VCALENDAR

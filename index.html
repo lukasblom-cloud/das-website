@@ -1,215 +1,306 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-AU">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Disability Advocacy Service - DAS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Disability Advocacy Service Inc — Free, confidential advocacy in Central Australia</title>
+  <meta name="description" content="Disability Advocacy Service Inc (DAS) — free, confidential advocacy for people with disability in Alice Springs, Tennant Creek and Central Australia.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="from-root">
+
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- HEADER -->
-  <header>
-    <div class="header-container">
-      <div class="logo">
-        <a href="/" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none;">
-          <img src="/images/das-logo-screenshot.png" alt="DAS Logo" style="width: 40px; height: auto;">
-          <span style="color: var(--primary-dark); font-size: 1.1rem;">Disability Advocacy Service</span>
-        </a>
+  <!-- Utility bar -->
+  <div class="utility">
+    <div class="container row">
+      <span class="tag">Free, confidential advocacy — Alice Springs &amp; Tennant Creek, NT</span>
+      <div class="quick">
+        <a href="tel:0889531422" data-org="phone"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(08) 8953 – 1422</a>
+        <a href="mailto:admin@das.org.au" data-org="email"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>admin@das.org.au</a>
+        <a href="https://www.facebook.com/DisabilityAdvocacyCentralAustralia/" aria-label="DAS on Facebook"><svg class="ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.5 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg></a>
       </div>
-      <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container row">
+      <a href="index.html" class="brand-lockup" aria-label="Disability Advocacy Service — home">
+        <img class="mark" src="images/burst-device.png" alt=""><span class="wordmark">Disability<br>Advocacy Service</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu">
+        <span></span><span></span><span></span>
       </button>
-      <nav aria-label="Main navigation">
-        <ul class="nav-menu">
-          <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
-          <li class="nav-item dropdown">
-            <a href="#" class="nav-link">ABOUT</a>
-            <ul class="dropdown-menu">
-              <li><a href="about-us/index.html">About Us</a></li>
-              <li><a href="board-and-staff/index.html">Board and Staff</a></li>
+      <nav class="primary" id="primary-nav" aria-label="Primary">
+        <ul class="primary-nav">
+          <li><a class="navlink active" href="index.html" aria-current="page">Home</a></li>
+          <li><a class="navlink" href="about-us/index.html">About Us <span class="chev" aria-hidden="true"></span></a>
+            <ul class="submenu">
+              <li><a href="board-and-staff/index.html">Board and CEO</a></li>
               <li><a href="reports/index.html">Reports</a></li>
+              <li><a href="submissions/index.html">Submissions</a></li>
               <li><a href="privacy-statement/index.html">Privacy Statement</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a href="#" class="nav-link">NEWS</a>
-            <ul class="dropdown-menu">
-              <li><a href="news/index.html">News</a></li>
+            </ul></li>
+          <li><a class="navlink" href="news/index.html">News <span class="chev" aria-hidden="true"></span></a>
+            <ul class="submenu">
               <li><a href="disability-royal-commission/index.html">Disability Royal Commission</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a href="#" class="nav-link">FORMS</a>
-            <ul class="dropdown-menu">
-              <li><a href="forms/index.html">Forms Overview</a></li>
+            </ul></li>
+          <li><a class="navlink" href="forms/index.html">Forms <span class="chev" aria-hidden="true"></span></a>
+            <ul class="submenu">
               <li><a href="membership/index.html">Membership Application</a></li>
               <li><a href="client-feedback-form/index.html">Client Feedback Form</a></li>
               <li><a href="client-referral-form/index.html">Client Referral Form</a></li>
-            </ul>
-          </li>
-          <li class="nav-item"><a href="calendar/index.html" class="nav-link">EVENTS</a></li>
-          <li class="nav-item dropdown">
-            <a href="#" class="nav-link">CONTACT</a>
-            <ul class="dropdown-menu">
-              <li><a href="contact-us/index.html">Contact Us</a></li>
-              <li><a href="contact-us/index.html#donations">Donations</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a href="https://www.facebook.com/DisabilityAdvocacyServiceInc" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Visit DAS on Facebook">
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-            </a>
-          </li>
+            </ul></li>
+          <li><a class="navlink" href="calendar/index.html">Events</a></li>
+          <li><a class="navlink" href="contact-us/index.html">Contact <span class="chev" aria-hidden="true"></span></a>
+            <ul class="submenu">
+              <li><a href="https://www.givenow.com.au/wwwdasorgau" target="_blank" rel="noopener">Donations</a></li>
+            </ul></li>
         </ul>
       </nav>
+      <a class="fb" href="https://www.facebook.com/DisabilityAdvocacyCentralAustralia/" aria-label="DAS on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.5 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg></a>
     </div>
   </header>
 
-  <!-- MAIN CONTENT -->
   <main id="main-content">
-    <!-- HERO SECTION -->
-    <section class="hero" style="background: linear-gradient(135deg, rgba(193, 102, 107, 0.8) 0%, rgba(208, 131, 141, 0.8) 100%), url('/images/hero-banner.jpg') center/cover;">
-      <div class="hero-content">
-        <h1>Disability Advocacy Service</h1>
-        <p class="hero-subtitle">Confidential individual advocacy to people with disability, their families and carers in Alice Springs, Tennant Creek and surrounding areas.</p>
-      </div>
-    </section>
 
-    <!-- WELCOME SECTION -->
-    <section class="content-section">
-      <h2>Who We Are</h2>
-      <div class="light-bg-section">
-        <p>Disability Advocacy Service Inc. (DAS) offers a free, confidential advocacy service to individuals and families with a disability, supporting and empowering clients to exercise their own rights in accordance with the Disability Advocacy Standards.</p>
-        <p>We are committed to social justice and equality for people with disability and their families. Our advocacy is inclusive, person-centred, and empowers clients to participate in decisions affecting them.</p>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="frame">
+        <img class="banner" src="images/banner.jpg" alt="People supported by DAS — music, sport and community in Central Australia">
       </div>
-    </section>
-
-    <!-- WHAT WE DO SECTION -->
-    <section class="content-section">
-      <h2>What We Do</h2>
-      <div class="card-grid">
-        <a href="about-us/index.html" class="card-link">
-          <div class="card">
-            <img src="/images/icon-advocacy.svg" alt="" class="card-icon" style="width: 80px; height: auto;">
-            <h3>Advocacy & NDIS Appeals</h3>
-            <p>Supporting clients to navigate the NDIS and appeal decisions through our free advocacy service.</p>
+      <div class="hero-intro container">
+        <div class="grid">
+          <div>
+            <p class="eyebrow">Welcome to DAS</p>
+            <h1 class="title">Advocacy alongside individuals and families <span class="pop">living with disability.</span></h1>
+            <p class="lead"><strong>Disability Advocacy Service Inc. (DAS)</strong> offers a free, confidential advocacy service to individuals and families with a disability, supporting and empowering clients to exercise their own rights in accordance with the Disability Advocacy Standards.</p>
+            <p class="lead">Our advocacy services are available to people with a disability in Alice Springs, Amoonguna, Tennant Creek and surrounding areas in Central Australia.</p>
+            <div class="hero-cta">
+              <a href="client-referral-form/index.html" class="btn btn--primary">Request advocacy <span class="arrow" aria-hidden="true">→</span></a>
+              <a href="about-us/index.html" class="btn btn--ghost">How we help</a>
+            </div>
           </div>
-        </a>
-        <a href="membership/index.html" class="card-link">
-          <div class="card">
-            <img src="/images/icon-membership.svg" alt="" class="card-icon" style="width: 80px; height: auto;">
+          <aside class="quick-card" aria-label="Office and contact">
+            <img class="burst" src="images/burst-device.png" alt="" aria-hidden="true">
+            <h3>Talk to an advocate</h3>
+            <div class="row-info"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:0889531422" data-org="phone">(08) 8953 – 1422</a></div>
+            <div class="row-info"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:admin@das.org.au" data-org="email">admin@das.org.au</a></div>
+            <div class="divider"></div>
+            <h4>Office hours</h4>
+            <p data-org="hours">Mon – Fri&nbsp; 8:30am – 4:30pm</p>
+            <h4 style="margin-top:14px;">Alice Springs office</h4>
+            <p data-org="address-lines">3/11 Railway Tce,<br>(Opposite McDonalds)<br>Alice Springs, NT 0870</p>
+            <div class="actions">
+              <a href="client-referral-form/index.html" class="btn btn--primary btn--sm">Refer a client <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Welcome + who we are -->
+    <section class="section section--tight">
+      <div class="container welcome">
+        <div class="body prose">
+          <p class="eyebrow">Who we are</p>
+          <h2 class="h">Free, independent and confidential — for people across Central Australia.</h2>
+          <p>We are committed to social justice and equality for people with disability and their families. Our advocacy is inclusive, person-centred, and empowers clients to participate in decisions affecting them.</p>
+          <p>We work with individuals and families to make sure decisions made about their lives are fair, informed, and on their terms — our role is to listen, to stand alongside, and to make sure your voice is heard in the rooms where it matters.</p>
+          <p style="margin-top:20px;"><a href="about-us/index.html" class="btn btn--ghost">More about DAS</a></p>
+        </div>
+        <aside class="callout" aria-label="Find our office">
+          <span class="label">Our office</span>
+          <h3>You'll find us at <span data-org="address-inline">3/11 Railway Tce, Alice Springs, NT 0870 (opposite McDonalds)</span></h3>
+          <p>The office is open <span data-org="hours">Mon – Fri&nbsp; 8:30am – 4:30pm</span> and offers a confidential client meeting space.</p>
+          <p>We look forward to seeing you there.</p>
+          <a class="map-link" href="https://maps.app.goo.gl/xrYGv6QfevFYsygX8" data-org="map-url" target="_blank" rel="noopener">
+            <svg width="14" height="18" viewBox="0 0 14 18" fill="currentColor" aria-hidden="true"><path d="M7 0a7 7 0 0 0-7 7c0 5.25 7 11 7 11s7-5.75 7-11a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 7 4.5a2.5 2.5 0 0 1 0 5z"/></svg>
+            Open in Google Maps
+          </a>
+        </aside>
+      </div>
+    </section>
+
+    <!-- What we do -->
+    <section class="section section--tinted" id="what-we-do">
+      <div class="container">
+        <div style="display:flex; justify-content:space-between; align-items:end; gap:24px; margin-bottom:40px; flex-wrap:wrap;">
+          <div>
+            <p class="eyebrow">What we do</p>
+            <h2 class="h" style="margin-bottom:0;">Five ways we walk beside you.</h2>
+          </div>
+          <p style="max-width:52ch; font-size:17px; line-height:1.55; margin:0;">Advocacy that puts the person first — across NDIS, membership, events, the Royal Commission, and the giving that keeps us free for the community.</p>
+        </div>
+        <div class="svc-grid">
+          <a class="svc svc--featured" href="about-us/index.html">
+            <span class="icon-wrap"><img src="images/icon-advocacy.svg" alt=""></span>
+            <h3>Advocacy &amp; NDIS Appeals</h3>
+            <p>We support people with a disability to build the knowledge and skills to advocate for themselves — including navigating the NDIS and appealing decisions.</p>
+            <span class="more">Learn more</span>
+          </a>
+          <a class="svc" href="membership/index.html">
+            <span class="icon-wrap"><img src="images/icon-membership.svg" alt=""></span>
             <h3>Membership</h3>
-            <p>Join our community to stay informed and connected with other people with disabilities.</p>
-          </div>
-        </a>
-        <a href="calendar/index.html" class="card-link">
-          <div class="card">
-            <img src="/images/icon-events.svg" alt="" class="card-icon" style="width: 80px; height: auto;">
+            <p>Membership is free and subject to acceptance. Join a community of people advocating for their rights.</p>
+            <span class="more">Apply for membership</span>
+          </a>
+          <a class="svc svc--purple" href="calendar/index.html">
+            <span class="icon-wrap"><img src="images/icon-events.svg" alt=""></span>
             <h3>Events</h3>
-            <p>Regular community events and workshops to build connection and share knowledge.</p>
-          </div>
-        </a>
-        <a href="disability-royal-commission/index.html" class="card-link">
-          <div class="card">
-            <img src="/images/icon-royal-commission.svg" alt="" class="card-icon" style="width: 80px; height: auto;">
+            <p>Our events calendar will keep you up to date on what's happening. Don't miss out!</p>
+            <span class="more">See the calendar</span>
+          </a>
+          <a class="svc" href="disability-royal-commission/index.html">
+            <span class="icon-wrap"><img src="images/icon-royal-commission.svg" alt=""></span>
             <h3>Disability Royal Commission</h3>
-            <p>Supporting people to understand and engage with the Disability Royal Commission.</p>
-          </div>
-        </a>
-        <a href="contact-us/index.html#donations" class="card-link">
-          <div class="card">
-            <img src="/images/icon-donations.svg" alt="" class="card-icon" style="width: 80px; height: auto;">
-            <h3>Support Our Work</h3>
-            <p>Your donations help us continue providing free advocacy services to the community.</p>
-          </div>
-        </a>
-        <a href="contact-us/index.html" class="card-link">
-          <div class="card">
-            <img src="/images/icon-advocacy.svg" alt="" class="card-icon" style="width: 80px; height: auto;">
-            <h3>Contact Us</h3>
-            <p>Get in touch with our team for support, referrals, or general enquiries.</p>
-          </div>
-        </a>
+            <p>The Disability Royal Commission has handed down its final report and recommendations to the Australian Government. We will keep you up to date here.</p>
+            <span class="more">Read updates</span>
+          </a>
+          <a class="svc svc--purple" href="https://www.givenow.com.au/wwwdasorgau" target="_blank" rel="noopener">
+            <span class="icon-wrap"><img src="images/icon-donations.svg" alt=""></span>
+            <h3>Donations</h3>
+            <p>DAS supports people with a disability to ensure their rights are protected and promoted. Visit our Donations page on Give Now.</p>
+            <span class="more">Donate on Give Now</span>
+          </a>
+        </div>
       </div>
     </section>
 
-    <!-- EVENTS SECTION -->
-    <section class="content-section">
-      <h2>Upcoming Events</h2>
-      <div class="light-bg-section" style="text-align: center;">
-        <p style="margin-bottom: var(--spacing-sm);">No upcoming events right now. Check back soon or <a href="contact-us/index.html">get in touch</a> to stay in the loop.</p>
-        <a href="calendar/index.html" class="btn btn-primary">View Calendar</a>
+    <!-- News preview -->
+    <section class="section">
+      <div class="container">
+        <div style="display:flex; justify-content:space-between; align-items:end; gap:24px; margin-bottom:36px; flex-wrap:wrap;">
+          <div>
+            <p class="eyebrow">News</p>
+            <h2 class="h" style="margin-bottom:0;">The latest from DAS.</h2>
+          </div>
+          <a href="news/index.html" class="btn btn--ghost btn--sm">All news</a>
+        </div>
+        <div class="news-grid">
+          <a class="news-card" href="deakin-uni-focus-group/index.html">
+            <div class="thumb"><img src="images/news/deakin-focus-group.jpeg" alt=""></div>
+            <div class="body">
+              <span class="date">23 March 2024</span>
+              <h3>Deakin University Focus Group</h3>
+              <p>We joined a Deakin University research focus group exploring disability advocacy and service provision in regional Australia.</p>
+              <span class="more">Read more</span>
+            </div>
+          </a>
+          <a class="news-card" href="harnessing-your-unique-strengths-entrepreneurial-tips-for-neurodivergent-individuals/index.html">
+            <div class="thumb"><img src="images/news/neurodivergent-strengths.jpg" alt=""></div>
+            <div class="body">
+              <span class="date">15 March 2024</span>
+              <h3>Harnessing Your Unique Strengths</h3>
+              <p>Entrepreneurial tips for neurodivergent individuals — building on strengths and creating supportive environments.</p>
+              <span class="more">Read more</span>
+            </div>
+          </a>
+          <a class="news-card" href="disability-royal-commission-hands-down-final-report-with-222-recommendations-for-change/index.html">
+            <div class="thumb"><img src="images/news/royal-commission-report.jpg" alt=""></div>
+            <div class="body">
+              <span class="date">8 March 2024</span>
+              <h3>Royal Commission Final Report Released</h3>
+              <p>The Disability Royal Commission has handed down its final report with 222 recommendations for change.</p>
+              <span class="more">Read more</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Events -->
+    <section class="section section--tight" style="padding-top:0;">
+      <div class="container">
+        <p class="eyebrow">Events</p>
+        <h2 class="h" style="margin-bottom:32px;">Upcoming events</h2>
+        <div class="welcome" style="align-items:center;">
+          <div class="events-empty-panel">
+            <div class="cal-icon" aria-hidden="true"><div class="top">DAS</div><div class="bd">—</div></div>
+            <div>
+              <h3>There are no upcoming events at this time.</h3>
+              <p>Check back here, or follow us on <a href="https://www.facebook.com/DisabilityAdvocacyCentralAustralia/">Facebook</a> to be the first to know when something is on.</p>
+            </div>
+          </div>
+          <div>
+            <p style="margin:0 0 16px; font-size:17px; line-height:1.6;">DAS runs information sessions, peer-support meet-ups and community gatherings throughout the year — open to people with a disability, families, and supporters across Central Australia.</p>
+            <a href="calendar/index.html" class="btn btn--ghost">View the calendar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust -->
+    <section class="trust">
+      <div class="container row">
+        <span class="lab">Registered &amp; accredited</span>
+        <div class="badges">
+          <div class="badge">
+            <img src="images/acnc-tick.png" alt="ACNC Registered Charity">
+            <span class="t">Registered with the Australian Charities and Not-for-profits Commission.</span>
+          </div>
+          <div class="badge">
+            <span class="t"><strong>DAS is a registered tax-deductible charity.</strong></span>
+            <a href="https://www.givenow.com.au/wwwdasorgau" target="_blank" rel="noopener" class="btn btn--primary btn--sm">Donate on Give Now <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-content">
-      <div class="footer-section">
-        <img src="/images/das-logo-screenshot.png" alt="DAS Logo" style="width: 60px; height: auto; margin-bottom: 1rem; background: none;">
-        <p><strong>Disability Advocacy Service Inc.</strong></p>
-        <p>Free, confidential advocacy for people with disability.</p>
-      </div>
-      <div class="footer-section">
-        <h3>Alice Springs</h3>
-        <p>
-          <strong>3/11 Railway Terrace</strong><br>
-          Alice Springs, NT 0870<br>
-          (Opposite McDonald's)
-        </p>
-        <p><strong>Phone:</strong> <a href="tel:0889531422">(08) 8953-1422</a><br>
-        <strong>Email:</strong> <a href="mailto:admin@das.org.au">admin@das.org.au</a><br>
-        <strong>Hours:</strong> Mon-Fri 8:30am - 4:30pm</p>
-      </div>
-      <div class="footer-section">
-        <h3>Tennant Creek</h3>
-        <p><strong>Phone:</strong> <a href="tel:0889531422">(08) 8953-1422</a><br>
-        <strong>Email:</strong> <a href="mailto:admin@das.org.au">admin@das.org.au</a></p>
-      </div>
-      <div class="footer-section">
-        <h3>Support Us</h3>
-        <p>Help us continue our free advocacy services.</p>
-        <div class="footer-badges">
-          <a href="https://www.givenow.com.au/disabilityadvocacyservice" target="_blank" rel="noopener noreferrer" class="badge-link" aria-label="Donate via GiveNow">
-            <img src="/images/givenow-logo-png_seeklogo-549217.png" alt="GiveNow - for your community" class="footer-badge-img">
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="cols">
+        <div class="logo">
+          <div class="brand-lockup brand-lockup--footer"><img class="mark" src="images/burst-device.png" alt=""><span class="wordmark">Disability<br>Advocacy Service</span></div>
+          <p class="tag">A free, confidential advocacy service to individuals and families with a disability — supporting and empowering clients to exercise their own rights.</p>
+        </div>
+        <div class="office-block">
+          <h4 class="office">Alice Springs, NT</h4>
+          <p><strong>Location:</strong><br><span data-org="address-lines">3/11 Railway Tce,<br>(Opposite McDonalds)<br>Alice Springs, NT 0870</span></p>
+          <a class="map-link" href="https://maps.app.goo.gl/xrYGv6QfevFYsygX8" data-org="map-url" target="_blank" rel="noopener">
+            View on Google Maps<img src="images/location-dot-wh.svg" alt="">
           </a>
-          <a href="https://www.acnc.gov.au/charity" target="_blank" rel="noopener noreferrer" class="badge-link" aria-label="ACNC Registered Charity">
-            <img src="/images/acnc-registered-charity-logo.jpg" alt="ACNC Registered Charity" class="footer-badge-img">
-          </a>
+          <p><strong>Phone:</strong> <a href="tel:0889531422" data-org="phone">(08) 8953 – 1422</a></p>
+          <p><strong>Email:</strong> <a href="mailto:admin@das.org.au" data-org="email">admin@das.org.au</a></p>
+          <p><strong>Office Hours:</strong><br><span data-org="hours">Mon – Fri&nbsp; 8:30am – 4:30pm</span></p>
+        </div>
+        <div class="office-block links">
+          <h4 class="office">Tennant Creek, NT</h4>
+          <p>All enquiries and referrals</p>
+          <p><strong>Phone:</strong> <a href="tel:0889531422" data-org="phone">(08) 8953 – 1422</a><br>
+             <strong>Email:</strong> <a href="mailto:admin@das.org.au" data-org="email">admin@das.org.au</a></p>
+          <h4 style="margin-top:24px;">Quick links</h4>
+          <p style="margin:0; line-height:2.1;">
+            <a href="about-us/index.html">About us</a> &nbsp;·&nbsp; <a href="reports/index.html">Reports</a><br>
+            <a href="membership/index.html">Membership</a> &nbsp;·&nbsp; <a href="client-referral-form/index.html">Referral form</a><br>
+            <a href="privacy-statement/index.html">Privacy statement</a>
+          </p>
+        </div>
+        <div class="charity">
+          <h4>Registered charity</h4>
+          <div class="charity-badges">
+            <img class="acnc" src="images/acnc-tick.png" alt="ACNC Registered Charity">
+            <img class="gn" src="images/givenow.png" alt="GiveNow">
+          </div>
+          <p>DAS is a registered tax-deductible charity.</p>
+          <a href="https://www.givenow.com.au/wwwdasorgau" target="_blank" rel="noopener" class="btn btn--white btn--sm" style="align-self:flex-start;">Donate on Give Now <span class="arrow" aria-hidden="true">→</span></a>
         </div>
       </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2024 Disability Advocacy Service Inc. All rights reserved. | <a href="privacy-statement/index.html">Privacy Statement</a></p>
+      <div class="bottom">
+        <span>© <span data-year>2026</span> Disability Advocacy Service Inc</span>
+        <span><a href="privacy-statement/index.html">Privacy Statement</a> &nbsp;·&nbsp; <a href="contact-us/index.html">Contact</a></span>
+      </div>
     </div>
   </footer>
 
-  <script>
-    // Hamburger menu toggle
-    const hamburger = document.querySelector('.hamburger');
-    const nav = document.querySelector('nav');
+  <a class="fab" href="client-referral-form/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>Submit a referral</a>
 
-    hamburger.addEventListener('click', () => {
-      const isOpen = nav.classList.toggle('nav-open');
-      hamburger.classList.toggle('active');
-      hamburger.setAttribute('aria-expanded', isOpen);
-    });
-
-    // Mobile dropdown toggle (tap instead of hover)
-    document.querySelectorAll('.dropdown > .nav-link').forEach(link => {
-      link.addEventListener('click', (e) => {
-        if (window.innerWidth <= 768) {
-          e.preventDefault();
-          const dropdown = link.parentElement;
-          dropdown.classList.toggle('open');
-        }
-      });
-    });
-  </script>
+  <script src="js/site.js"></script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Harnessing Your Unique Strengths — Disability Advocacy Service Inc</title>
+  <title>Submissions — Disability Advocacy Service Inc</title>
   <meta name="description" content="Disability Advocacy Service Inc (DAS) — free, confidential advocacy for people with disability in Alice Springs, Tennant Creek and Central Australia.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,14 +38,14 @@
       <nav class="primary" id="primary-nav" aria-label="Primary">
         <ul class="primary-nav">
           <li><a class="navlink" href="../index.html">Home</a></li>
-          <li><a class="navlink" href="../about-us/index.html">About Us <span class="chev" aria-hidden="true"></span></a>
+          <li><a class="navlink active" href="../about-us/index.html" aria-current="page">About Us <span class="chev" aria-hidden="true"></span></a>
             <ul class="submenu">
               <li><a href="../board-and-staff/index.html">Board and CEO</a></li>
               <li><a href="../reports/index.html">Reports</a></li>
               <li><a href="../submissions/index.html">Submissions</a></li>
               <li><a href="../privacy-statement/index.html">Privacy Statement</a></li>
             </ul></li>
-          <li><a class="navlink active" href="../news/index.html" aria-current="page">News <span class="chev" aria-hidden="true"></span></a>
+          <li><a class="navlink" href="../news/index.html">News <span class="chev" aria-hidden="true"></span></a>
             <ul class="submenu">
               <li><a href="../disability-royal-commission/index.html">Disability Royal Commission</a></li>
             </ul></li>
@@ -68,61 +68,41 @@
 
   <div class="page-hero">
     <div class="container">
-      <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> <span class="sep" aria-hidden="true">/</span> <a href="../news/index.html">News</a> <span class="sep" aria-hidden="true">/</span> <span aria-current="page">Harnessing Your Unique Strengths</span></nav>
-      <h1>Harnessing Your Unique Strengths</h1>
-      <p class="sub">Entrepreneurial tips for neurodivergent individuals.</p>
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> <span class="sep" aria-hidden="true">/</span> <a href="../about-us/index.html">About Us</a> <span class="sep" aria-hidden="true">/</span> <span aria-current="page">Submissions</span></nav>
+      <h1>Submissions</h1>
+      <p class="sub">Formal submissions DAS has made to government consultations, inquiries and reviews.</p>
     </div>
   </div>
   <main id="main-content">
 
     <section class="section section--tight">
-      <div class="container container--narrow">
-        <p class="article-meta">Published 15 March 2024</p>
-        <div class="prose">
+      <div class="container">
+        <p class="eyebrow">Systemic advocacy</p>
+        <h2 class="h">What we've told governments and inquiries.</h2>
+        <p class="lead" style="margin-bottom:32px;">Alongside individual advocacy, DAS makes formal submissions to government consultations, inquiries and reviews — putting the experiences of people with disability in Central Australia on the public record. Every submission we publish is listed here.</p>
 
-          <p>Neurodivergent individuals often bring unique perspectives and strengths to entrepreneurship. This article explores strategies for leveraging these strengths while navigating challenges in building and growing a business.</p>
-          <h3>Understanding your strengths</h3>
-          <p>Many neurodivergent entrepreneurs report strengths in:</p>
-          <ul>
-            <li>Creative problem-solving and outside-the-box thinking</li>
-            <li>Attention to detail and pattern recognition</li>
-            <li>Hyperfocus abilities that drive deep work on passion projects</li>
-            <li>Unique perspectives that create innovative solutions</li>
-            <li>Authentic communication and genuine connections</li>
-          </ul>
-          <h3>Building on your unique skills</h3>
-          <p>Rather than trying to fit into traditional business molds, consider:</p>
-          <ul>
-            <li>Identifying the specific tasks and environments where you perform best</li>
-            <li>Building teams that complement your strengths and challenges</li>
-            <li>Creating systems and processes that support your working style</li>
-            <li>Leveraging technology to automate or support tasks that are challenging</li>
-            <li>Setting boundaries that protect your wellbeing while supporting growth</li>
-          </ul>
-          <h3>Navigating workplace dynamics</h3>
-          <p>Consider these strategies when managing team dynamics and customer relationships:</p>
-          <ul>
-            <li>Clear communication of expectations and processes</li>
-            <li>Creating a transparent company culture that values diverse working styles</li>
-            <li>Offering flexibility in how work gets done</li>
-            <li>Regular check-ins and feedback to ensure alignment</li>
-            <li>Building support systems for challenging times</li>
-          </ul>
-          <h3>Creating supportive environments</h3>
-          <p>Success often comes from designing an environment that works for you:</p>
-          <ul>
-            <li>Physical workspace organization that minimizes sensory overwhelm</li>
-            <li>Flexible scheduling that accommodates your energy patterns</li>
-            <li>Access to mentors and peers who understand neurodiversity</li>
-            <li>Mental health and wellbeing resources</li>
-            <li>A business model aligned with your values and capabilities</li>
-          </ul>
-          <div class="panel" style="margin-top:28px;">
-            <p><strong>Need support?</strong><br>
-            DAS provides advocacy services to help people with disability, including neurodivergent individuals, navigate support and access resources. <a href="../contact-us/index.html">Contact us</a> to learn more about how we can support you.</p>
-          </div>
+        <div class="filters" role="search" aria-label="Filter submissions">
+          <label for="f-topic" class="visually-hidden">Filter by topic</label>
+          <select id="f-topic"><option value="">All topics</option></select>
+          <label for="f-year" class="visually-hidden">Filter by year</label>
+          <select id="f-year"><option value="">All years</option></select>
+          <label for="f-search" class="visually-hidden">Search submissions</label>
+          <input type="search" id="f-search" placeholder="Search submissions…">
+          <span class="count" id="f-count" aria-live="polite"></span>
         </div>
-        <a class="back-link" href="../news/index.html">← Back to News</a>
+
+        <div id="submissions-table"></div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0;">
+      <div class="container">
+        <div class="panel" style="max-width:760px;">
+          <h3>Want a copy, or want to contribute?</h3>
+          <p>If a submission is listed as available on request, or you'd like to share your experience for a future submission, contact us:</p>
+          <p><strong>Phone:</strong> <a href="tel:0889531422" data-org="phone">(08) 8953 – 1422</a> &nbsp;·&nbsp;
+             <strong>Email:</strong> <a href="mailto:admin@das.org.au" data-org="email">admin@das.org.au</a></p>
+        </div>
       </div>
     </section>
   </main>
@@ -177,5 +157,6 @@
   <a class="fab" href="../client-referral-form/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>Submit a referral</a>
 
   <script src="../js/site.js"></script>
+  <script src="../js/submissions.js"></script>
 </body>
 </html>
