@@ -571,6 +571,24 @@ a.report-card:hover { transform: translateY(-3px); box-shadow: 0 16px 32px rgba(
   margin-top: 20px; font-size: 16px;
 }
 
+/* No-email opt-out (TASK-01393) */
+.no-email-check {
+  display: flex; margin: 20px 0 0;
+}
+.no-email-check label {
+  display: flex; align-items: center; gap: 10px;
+  cursor: pointer; font-weight: 600; font-size: 15.5px; color: var(--das-mid);
+}
+.no-email-check input[type="checkbox"] {
+  width: 20px; height: 20px; flex-shrink: 0;
+  accent-color: var(--das-red); cursor: pointer;
+}
+.no-email-panel { margin-top: 16px; }
+.no-email-panel ul {
+  margin: 12px 0; padding-left: 20px;
+  display: grid; gap: 8px;
+}
+
 /* ---------- Contact ---------- */
 .office-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 .office-card {
