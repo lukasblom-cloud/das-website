@@ -1,0 +1,41 @@
+name: Facebook feed refresh
+
+# Pulls the latest posts from the DAS Facebook page and commits the
+# regenerated News-page feed block. The commit to main triggers the
+# normal Netlify deploy. See scripts/fb-feed/README.md for token setup.
+
+on:
+  schedule:
+    - cron: "30 20 * * *" # 06:00 ACST daily
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fb-feed
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch Facebook feed
+        env:
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+          FB_PAGE_ID: ${{ vars.FB_PAGE_ID }}
+        run: python3 scripts/fb-feed/fetch_feed.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "das-fb-feed[bot]"
+          git config user.email "actions@users.noreply.github.com"
+          git add news/index.html news/fb-feed.json images/fb
+          if git diff --cached --quiet; then
+            echo "Feed unchanged — nothing to deploy."
+          else
+            git commit -m "Auto-update Facebook feed"
+            git push
+          fi

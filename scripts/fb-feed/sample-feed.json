@@ -1,0 +1,26 @@
+[
+  {
+    "message": "SAMPLE POST — We're a proud sponsor of the 2026 Alice Springs Disability Expo. Come and say hello at our stall, grab a yarn with the team, and find out how free, confidential advocacy works.",
+    "created_time": "2026-08-20T02:30:00+0000",
+    "permalink_url": "https://www.facebook.com/DisabilityAdvocacyCentralAustralia/",
+    "local_image": "../images/news/deakin-focus-group.jpeg"
+  },
+  {
+    "message": "SAMPLE POST — Our office has moved! You'll now find us at 12 Gregory Terrace, Alice Springs. Same phone number, same friendly faces: (08) 8953 1422.",
+    "created_time": "2026-08-14T05:10:00+0000",
+    "permalink_url": "https://www.facebook.com/DisabilityAdvocacyCentralAustralia/",
+    "local_image": "../images/news/royal-commission-report.jpg"
+  },
+  {
+    "message": "SAMPLE POST — Reminder: our advocacy service is free and confidential for people with disability in Alice Springs, Tennant Creek and Central Australia. Referrals can be made online, by phone, or by dropping in. This one is deliberately longer to exercise the excerpt truncation logic so the card shows an ellipsis where the text is cut off at a word boundary rather than mid-word.",
+    "created_time": "2026-08-08T23:45:00+0000",
+    "permalink_url": "https://www.facebook.com/DisabilityAdvocacyCentralAustralia/",
+    "local_image": "../images/news/neurodivergent-strengths.jpg"
+  },
+  {
+    "message": "SAMPLE POST — A text-only post with no image, to check the card renders cleanly without a thumbnail.",
+    "created_time": "2026-08-02T08:00:00+0000",
+    "permalink_url": "https://www.facebook.com/DisabilityAdvocacyCentralAustralia/",
+    "local_image": null
+  }
+]
