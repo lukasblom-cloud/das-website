@@ -52,6 +52,19 @@ python3 scripts/fb-feed/fetch_feed.py --sample
 5. **Test:** Actions tab → *Facebook feed refresh* → Run workflow, then
    check the deploy preview of the resulting commit.
 
+## Where things live (set up 2 Sep 2026)
+
+- Meta app: **DAS Website Feed**, app ID `1083464360733368` — owned by the
+  **Trilemma** business portfolio (`162338298995684`), which is purely the
+  app's administrative container; it grants Trilemma no access to the DAS
+  page. The token comes from Lukas's profile-level admin on the page.
+- Facebook page: **DAS Disability Advocacy Service Central Australia**,
+  page ID `150975168107356` (repo variable `FB_PAGE_ID` pins it).
+- Token: never-expiring Page token in the `FB_PAGE_TOKEN` Actions secret,
+  with a backup copy in 1Password (Automation vault → "das fb token").
+  It dies only if Lukas's FB password changes, his page admin is removed,
+  or the app is disconnected under the page's Business integrations.
+
 ## Failure modes
 
 - Workflow fails with `FB_PAGE_TOKEN is not set` — the secret is missing.
