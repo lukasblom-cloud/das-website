@@ -1,0 +1,27 @@
+{
+  "averageRating": 4.8,
+  "totalReviewCount": 24,
+  "reviews": [
+    {
+      "reviewId": "sample-1",
+      "reviewer": { "displayName": "Sample Reviewer" },
+      "starRating": "FIVE",
+      "comment": "Fixture review used by --sample so the block can be styled and reviewed before the API access request is approved. Replace nothing — this file is never used in CI.",
+      "createTime": "2026-08-14T02:15:00.000Z"
+    },
+    {
+      "reviewId": "sample-2",
+      "reviewer": { "displayName": "Second Sample" },
+      "starRating": "FIVE",
+      "comment": "A second fixture card, deliberately shorter, so the grid can be checked with uneven text lengths.",
+      "createTime": "2026-07-02T23:40:00.000Z"
+    },
+    {
+      "reviewId": "sample-3",
+      "reviewer": { "displayName": "Third Sample" },
+      "starRating": "FOUR",
+      "comment": "A four-star fixture, to confirm the star row renders a mix of filled and empty stars correctly and that GBP_MIN_STARS is doing its job.",
+      "createTime": "2026-05-19T06:05:00.000Z"
+    }
+  ]
+}
