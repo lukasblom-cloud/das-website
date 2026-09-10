@@ -989,3 +989,23 @@ button.linkish:hover { color: var(--das-purple); }
   .page-hero h1 { color: #000; }
   .page-hero .crumbs { display: none; }
 }
+
+
+/* ── Newsletter sign-up (newsletter/index.html) ─────────────────── */
+.das-subscribe { max-width: 560px; }
+.das-subscribe__row { margin: 0 0 16px; }
+.das-subscribe label { display: block; font-weight: 600; margin: 0 0 6px; }
+.das-subscribe label .muted { font-weight: 400; color: var(--das-mid); }
+.das-subscribe input[type="text"],
+.das-subscribe input[type="email"] {
+  width: 100%; box-sizing: border-box; font: inherit; font-size: 17px;
+  padding: 12px 14px; border: 2px solid var(--das-lilac); border-radius: var(--radius-sm);
+  background: #fff; color: var(--das-ink);
+}
+.das-subscribe input:focus-visible { outline: 3px solid var(--das-purple); outline-offset: 2px; }
+.das-subscribe__hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.das-subscribe__consent { margin: 4px 0 20px; }
+.das-subscribe__consent label { display: flex; gap: 10px; align-items: flex-start; font-weight: 500; line-height: 1.5; }
+.das-subscribe__consent input { margin-top: 5px; width: 20px; height: 20px; flex-shrink: 0; accent-color: var(--das-purple); }
+.das-subscribe__note { margin: 18px 0 0; font-size: 15px; color: var(--das-mid); }
+.das-subscribe__done { margin-top: 24px; }
