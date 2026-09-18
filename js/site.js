@@ -9,9 +9,9 @@
    ============================================================ */
 
 var DAS_ORG = {
-  addressLines: "3/11 Railway Tce,<br>(Opposite McDonalds)<br>Alice Springs, NT 0870",
-  addressInline: "3/11 Railway Tce, Alice Springs, NT 0870 (opposite McDonalds)",
-  mapUrl: "https://maps.app.goo.gl/xrYGv6QfevFYsygX8",
+  addressLines: "12 Gregory Terrace,<br>Alice Springs NT 0870",
+  addressInline: "12 Gregory Terrace, Alice Springs NT 0870",
+  mapUrl: "https://www.google.com/maps/search/?api=1&query=12+Gregory+Terrace%2C+Alice+Springs+NT+0870",
   phoneDisplay: "(08) 8953 – 1422",
   phoneHref: "tel:0889531422",
   email: "admin@das.org.au",
@@ -67,11 +67,35 @@ var DAS_ORG = {
     for (var i = 0; i < els.length; i++) els[i].textContent = new Date().getFullYear();
   }
 
+  /* ---- "No email" path (TASK-01393) ----
+     Each online form can carry a [data-no-email-toggle="key"] checkbox
+     alongside a [data-online-form="key"] wrapper (the Typeform embed +
+     PDF link, shown by default) and a [data-no-email-panel="key"] panel
+     (phone / postal / PDF guidance, hidden by default). Checking the box
+     swaps one for the other — the Typeform itself still requires an
+     email address (that's a Typeform-side change, out of scope here),
+     so this steers no-email visitors to a path that doesn't need one. */
+  function initNoEmail() {
+    var toggles = document.querySelectorAll("[data-no-email-toggle]");
+    for (var i = 0; i < toggles.length; i++) {
+      (function (toggle) {
+        var key = toggle.getAttribute("data-no-email-toggle");
+        var onlineForm = document.querySelector('[data-online-form="' + key + '"]');
+        var panel = document.querySelector('[data-no-email-panel="' + key + '"]');
+        if (!onlineForm || !panel) return;
+        toggle.addEventListener("change", function () {
+          onlineForm.hidden = toggle.checked;
+          panel.hidden = !toggle.checked;
+        });
+      })(toggles[i]);
+    }
+  }
+
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", function () {
-      fillOrg(); initNav(); initYear();
+      fillOrg(); initNav(); initYear(); initNoEmail();
     });
   } else {
-    fillOrg(); initNav(); initYear();
+    fillOrg(); initNav(); initYear(); initNoEmail();
   }
 })();
