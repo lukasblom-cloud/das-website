@@ -2,16 +2,16 @@
    DAS site JS
    ------------------------------------------------------------
    ★ ORGANISATION DETAILS LIVE HERE — ONE PLACE. ★
-   When DAS moves (~20 Jul 2026), update ORG below and every
+   When DAS moves, update ORG below and every
    page updates. (The same text also exists as static fallback
    in each page's HTML for no-JS visitors — a find-and-replace
    of the old street address covers those.)
    ============================================================ */
 
 var DAS_ORG = {
-  addressLines: "3/11 Railway Tce,<br>(Opposite McDonalds)<br>Alice Springs, NT 0870",
-  addressInline: "3/11 Railway Tce, Alice Springs, NT 0870 (opposite McDonalds)",
-  mapUrl: "https://maps.app.goo.gl/xrYGv6QfevFYsygX8",
+  addressLines: "12 Gregory Terrace,<br>Alice Springs, NT 0870",
+  addressInline: "12 Gregory Terrace, Alice Springs, NT 0870",
+  mapUrl: "https://www.google.com/maps/search/?api=1&query=12+Gregory+Terrace%2C+Alice+Springs+NT+0870",
   phoneDisplay: "(08) 8953 – 1422",
   phoneHref: "tel:0889531422",
   email: "admin@das.org.au",
