@@ -1,2 +1,5 @@
 # Redirect www to non-www
 https://www.das.org.au/* https://das.org.au/:splat 301!
+# /board is the Newland Park Talk Board. It is hosted on its own Netlify site; this passes das.org.au/board
+# through to it. Unlisted on purpose: do not link to it from the site or add it to robots.txt.
+/board/*  https://das-talk-board.netlify.app/board/:splat  200
